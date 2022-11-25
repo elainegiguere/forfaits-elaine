@@ -1,0 +1,29 @@
+<p>liste-forfaits courts works!</p>
+<div class="container-flex">
+    <div class="flex">
+      
+        <mat-card class="card" *ngFor="let f of forfaits">
+            <div *ngIf="f.statut ==='premium'">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"> <img mat-card-image src="https://picsum.photos/200/200" alt=" Lorem Picsum"></div>
+                    <mat-card-title>{{f.nom}}</mat-card-title>
+                    <mat-card-subtitle>{{f.etablissement.nom}}</mat-card-subtitle>
+                    <app-prix [prix]="f.prix" [nouveauPrix]="f.nouveauPrix"></app-prix>
+                </mat-card-header>
+            
+                <mat-card-content>
+                    <p>
+                        {{f.dateDeDebut}}
+                    </p>
+                    <p>
+                        {{f.dateDeFin}}
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>en savoir plus</button>
+                </mat-card-actions>
+        <div>
+     <!--</mat-card> ?? pourquoi il me dit que cette balise est de trop?--> 
+</div>
+   
+</div>

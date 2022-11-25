@@ -1,0 +1,15 @@
+
+:host {
+    display: block;
+    background-color: rgb(185, 235, 236);
+}
+.card {
+    max-width: 200px;
+    margin:10px
+}
+
+.flex {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}

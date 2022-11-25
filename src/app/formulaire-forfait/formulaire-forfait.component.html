@@ -1,0 +1,89 @@
+<p>formulaire-forfait works!</p>
+
+<form class="example-form">
+  <p>
+    <mat-form-field appearance="standard">
+      <mat-label>Standard form field</mat-label>
+      <input matInput placeholder="Placeholder">
+    </mat-form-field>
+  </p>
+ 
+<p>
+    <mat-form-field appearance="fill">
+        <mat-label>Textarea</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+</p>
+
+<div class="innerFormWrap">
+    
+        <mat-form-field appearance="standard">
+            <mat-label>Nom de l’établissement</mat-label>
+            <input matInput placeholder="Nom de l’établissement ">
+          </mat-form-field>
+   
+    
+        <mat-form-field appearance="standard">
+            <mat-label>Adresse</mat-label>
+            <input matInput placeholder="Adresse ">
+          </mat-form-field>
+   
+    
+        <mat-form-field appearance="standard">
+            <mat-label>Ville</mat-label>
+            <input matInput placeholder="Ville">
+          </mat-form-field>
+   
+  
+        <mat-form-field appearance="standard">
+            <mat-label>Telephone</mat-label>
+            <input matInput placeholder="Telephone">
+          </mat-form-field>
+  
+
+   
+        <mat-form-field appearance="standard">
+            <mat-label>Courriel</mat-label>
+            <input matInput placeholder="Courriel">
+          </mat-form-field>
+   
+    
+        <mat-form-field appearance="standard">
+            <mat-label>Site Web</mat-label>
+            <input matInput placeholder="Site Web">
+          </mat-form-field>
+   
+</div>
+ <!-- Début du date picker  Voir le TS de Angular Meterial est-ce que je dois faire une nouveau component juste pour celui là?-->
+ <mat-form-field appearance="fill">
+    <mat-label>Enter a date range</mat-label>
+    <mat-date-range-input [rangePicker]="picker">
+      <input matStartDate placeholder="Start date">
+      <input matEndDate placeholder="End date">
+    </mat-date-range-input>
+    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+  </mat-form-field>
+ <!-- Fin du date picker -->
+
+ <section class="example-section">
+    <mat-checkbox class="example-margin">Premium</mat-checkbox>
+    <mat-checkbox class="example-margin" [disabled]="true">Disabled</mat-checkbox>
+  </section>
+
+<p>
+    <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>Prix</mat-label>
+        <input matInput type="number" class="example-right-align" placeholder="0">
+        <span matPrefix>$&nbsp;</span>
+        <span matSuffix>.00</span>
+    </mat-form-field>
+    <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>Nouveau prix</mat-label>
+        <input matInput type="number" class="example-right-align" placeholder="0">
+        <span matPrefix>$&nbsp;</span>
+        <span matSuffix>.00</span>
+    </mat-form-field>
+</p>
+</form>
