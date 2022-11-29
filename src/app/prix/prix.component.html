@@ -1,20 +1,20 @@
 
  <!-- Condition pour barrer le prix -->
     <div [ngClass]="{'barre' : 'nouveauPrix'}">
-        <mat-card-subtitle>
+        <mat-card-subtitle class="oldprice">
             {{prix}} $ 
         </mat-card-subtitle>
     </div>
     <!-- Condition pour afficher le nouveau le prix -->
     <div *ngIf="nouveauPrix">
-        <mat-card-subtitle>
+        <mat-card-subtitle class="newprice">
             {{nouveauPrix}} $ 
         </mat-card-subtitle>
     </div>
     <!-- Condition pour afficher la différence de prix -->
     <div *ngIf="prix && nouveauPrix">
-        <mat-card-subtitle>
-            {{prix-nouveauPrix}} $ 
+        <mat-card-subtitle class="pricesave">
+           épargne de  {{prix-nouveauPrix}} $ 
         </mat-card-subtitle>
     </div>
 

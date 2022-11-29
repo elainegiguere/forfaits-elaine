@@ -2,9 +2,10 @@
 :host {
     display: block;
     background-color: rgb(185, 235, 236);
+
 }
 .card {
-    max-width: 200px;
+    
     margin:10px
 }
 
@@ -13,3 +14,13 @@
     flex-wrap:wrap;
     justify-content: space-between;
 }
+.flex-col{
+    display:flex;
+    flex-direction: row;
+}
+.drawer{
+    background-color: rgb(185, 235, 236);
+    padding-bottom: 2%;
+}
+
+

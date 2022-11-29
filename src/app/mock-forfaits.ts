@@ -4,9 +4,9 @@ export const FORFAITS: Forfaits[] = [
     {
         urlImage:'https://picsum.photos/200/200',
         nom: 'Las Vegas',
-        description: 'Est nemo quasi non sunt doloribus aut tempora quaerat rem aspernatur modi',
+        description: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem.',
         code: 5437,
-        categories: ['sport', 'plein-air', 'détente'],
+        categories: ['sport',  'plein-air', 'détente'],
         statut:'premium',
         etablissement: 
         { 
@@ -36,7 +36,7 @@ export const FORFAITS: Forfaits[] = [
     {
         urlImage:'https://picsum.photos/200/200',
         nom: 'Los Angeles',
-        description: 'Est nemo quasi non sunt doloribus aut tempora quaerat rem aspernatur modi',
+        description: ' Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem.',
         code: 5438,
         categories: ['sport', 'plein-air', 'détente'],
         statut:'premium',
@@ -67,7 +67,7 @@ export const FORFAITS: Forfaits[] = [
     {
         urlImage:'https://picsum.photos/200/200',
         nom: 'Miami',
-        description: 'Est nemo quasi non sunt doloribus aut tempora quaerat rem aspernatur modi',
+        description: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem.',
         code: 5439,
         categories: ['sport', 'plein-air', 'détente'],
         statut:'premium',
@@ -76,7 +76,7 @@ export const FORFAITS: Forfaits[] = [
             coordonnees: 
                 {
                 adresse: '4332',
-                ville: 'Las Vegas',
+                ville: 'Miami',
                 telephone: '276-585-3333', 
                 courriel: 'me@vegas.com',
                 siteWeb: 'vegas.com',
@@ -98,7 +98,7 @@ export const FORFAITS: Forfaits[] = [
     {
         urlImage:'https://picsum.photos/200/200',
         nom: 'New York',
-        description: 'Est nemo quasi non sunt doloribus aut tempora quaerat rem aspernatur modi',
+        description: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem.',
         code: 5440,
         categories: ['sport', 'plein-air', 'détente'],
         statut:'',
@@ -112,7 +112,7 @@ export const FORFAITS: Forfaits[] = [
                 courriel: 'me@vegas.com',
                 siteWeb: 'vegas.com',
             },
-            description: 'Est nemo quasi non sunt doloribus aut tempora',
+            description: ' Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem',
         },
 
         dateDeDebut: '10 mars 2022',

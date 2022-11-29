@@ -1,13 +1,15 @@
 :host{
     display: block;
-    background-color: rgb(236, 221, 185);
+    background-color:  #e4ffff;
 }
 
-.container-flex{
-    background-color: bisque;
+.container{
+    background-color: #e4ffff;
     margin:auto;
     margin-bottom: 2%
 }
+
+
 .card {
 max-width: 100%;
 margin:10px
@@ -16,10 +18,30 @@ margin:10px
 .flex {
 display:flex;
 flex-wrap:wrap;
-justify-content: space-between;
+justify-content: space-around;
 }
 .imgForfaitLong{
     width:100%;
     height: auto;
-    margin-left:auto;
+    padding: 2%;
+}
+.row{
+    align-items: center;
+}
+h2{
+    padding-bottom: 2%;
+}
+.etoiles{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.commentaire{
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.adresseWrapper p{
+    margin-bottom: 0px;
 }

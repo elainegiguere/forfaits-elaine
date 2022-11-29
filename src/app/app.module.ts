@@ -15,9 +15,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
 import {FormulaireAvisComponent } from './formulaire-avis/formulaire-avis.component';
 import {MatNativeDateModule } from '@angular/material/core';
 import { PrixComponent } from './prix/prix.component';
+import { RechercheComponent } from './recherche/recherche.component';
 
 
 @NgModule({
@@ -28,7 +31,8 @@ import { PrixComponent } from './prix/prix.component';
     ForfaitLongComponent,
     FormulaireForfaitComponent,
     FormulaireAvisComponent,
-    PrixComponent
+    PrixComponent,
+    RechercheComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,8 @@ import { PrixComponent } from './prix/prix.component';
     MatInputModule,
     MatCheckboxModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule, 
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
