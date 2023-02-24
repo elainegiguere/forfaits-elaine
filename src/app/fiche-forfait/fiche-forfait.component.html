@@ -1,0 +1,26 @@
+
+<div class="row align-items-center forfait-wrap">
+    <div class="col-md-6">
+        <img class="imgForfaitLong" mat-card-image src="https://picsum.photos/600/600" alt=" Lorem Picsum">
+    </div>
+    <div class="col-md-6 content-wrap">
+        <h2>{{f.nom}}</h2>
+        <app-prix class="flex" [prix]="f.prix" [nouveauPrix]="f.nouveauPrix"></app-prix>
+
+        <p>{{f.description}}</p>
+
+        <div class="coordo-wrap">
+            <h4>{{f.etablissement.nom}}</h4>
+            <div class="adresse-wrap">
+                <p>{{f.etablissement.coordonnees.adresse}}</p>
+                <p>{{f.etablissement.coordonnees.ville}}</p>
+                <p>{{f.etablissement.coordonnees.telephone}}</p>
+                <p>{{f.etablissement.coordonnees.courriel}}</p>
+                <p >{{f.etablissement.coordonnees.siteWeb}}</p>
+            </div>
+            <p class="etablissement-desc">{{f.etablissement.description}}</p>
+        </div>
+
+      
+    </div>
+</div>

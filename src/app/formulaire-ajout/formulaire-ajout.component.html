@@ -1,0 +1,123 @@
+   <div class="container">
+
+        <form #forfaitFormAjout="ngForm">
+            <h4> Formulaire forfait</h4>
+            <mat-form-field appearance="fill">
+                <mat-label>Nom</mat-label>
+                <input matInput placeholder="Nom du forfait " required minlength="10" maxlength="50"
+                    name="nom" [(ngModel)]="Forfait.nom" #nom="ngModel">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>code</mat-label>
+                <input matInput placeholder="code" 
+                    name="code" [(ngModel)]="Forfait.code" #code="ngModel">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>description</mat-label>
+                <input matInput placeholder="description du forfait" required minlength="20" maxlength="255"
+                name="description" [(ngModel)]="Forfait.description" #description="ngModel">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>statut</mat-label>
+                <mat-select name="statut" [(ngModel)]="Forfait.statut" #statut="ngModel">
+                  <mat-option value="regulier">régulier</mat-option>
+                  <mat-option value="premium">premium</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+            <!-- Début du date picker  Voir le TS de Angular Meterial est-ce que je dois faire une nouveau component juste pour celui là?-->
+            <mat-form-field appearance="fill">
+                <mat-label>Dates du fortait</mat-label>
+                <mat-date-range-input [rangePicker]="picker"> 
+                    <input matStartDate placeholder="Start date" name="dateDebut" [(ngModel)]="Forfait.dateDeDebut" #dateDeDebut="ngModel">
+                    <input matEndDate placeholder="End date" name="dateDeFin" [(ngModel)]="Forfait.dateDeFin" #dateDeFin="ngModel">
+                </mat-date-range-input>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-date-range-picker #picker></mat-date-range-picker>
+            </mat-form-field>
+            <!-- Fin du date picker -->
+
+           
+
+            <p>
+                <mat-form-field appearance="fill" floatLabel="always">
+                    <mat-label>Prix régulier</mat-label>
+                    <input matInput type="number" class="example-right-align" placeholder="0"
+                    name="prix" [(ngModel)]="Forfait.prix" #prix="ngModel">
+                    <span matPrefix>$&nbsp;</span>
+                    <span matSuffix>.00</span>
+                </mat-form-field>
+                <mat-form-field appearance="fill" floatLabel="always">
+                    <mat-label>Nouveau prix</mat-label>
+                    <input matInput type="number" class="example-right-align" placeholder="0"
+                    name="nouveau prix" [(ngModel)]="Forfait.nouveauPrix" #nouveauPrix="ngModel">
+                    <span matPrefix>$&nbsp;</span>
+                    <span matSuffix>.00</span>
+                </mat-form-field>
+            </p>
+
+            <h6>Informations sur l'établissement</h6>
+
+            <mat-form-field appearance="standard">
+                <mat-label>Nom de l’établissement</mat-label>
+                <input matInput placeholder="Nom de l’établissement" required
+                name="etablissement" [(ngModel)]="Forfait.etablissement.nom" #etablissement="ngModel">
+            </mat-form-field>
+
+
+            <mat-form-field appearance="standard">
+                <mat-label>Adresse</mat-label>
+                <input matInput placeholder="Adresse" required
+                name="adresse" [(ngModel)]="Forfait.etablissement.coordonnees.adresse" #adresse="ngModel">
+            </mat-form-field>
+
+
+            <mat-form-field appearance="standard">
+                <mat-label>Ville</mat-label>
+                <input matInput placeholder="Ville" required
+                name="ville" [(ngModel)]="Forfait.etablissement.coordonnees.ville" #ville="ngModel">
+            </mat-form-field>
+
+
+            <mat-form-field appearance="standard">
+                <mat-label>Telephone</mat-label>
+                <input matInput placeholder="Telephone" required
+                name="telelphone" [(ngModel)]="Forfait.etablissement.coordonnees.telephone" #telephone="ngModel">
+            </mat-form-field>
+
+
+
+            <mat-form-field appearance="standard">
+                <mat-label>Courriel</mat-label>
+                <input matInput placeholder="Courriel" required
+                name="courriel" [(ngModel)]="Forfait.etablissement.coordonnees.courriel" #courriel="ngModel">
+            </mat-form-field>
+
+
+            <mat-form-field appearance="standard">
+                <mat-label>Site Web</mat-label>
+                <input matInput placeholder="Site web" required
+                name="siteWeb" [(ngModel)]="Forfait.etablissement.coordonnees.siteWeb" #siteWeb="ngModel">
+            </mat-form-field>
+
+
+
+
+            <div>
+                <button *ngIf="Forfait?.id; else boutonAjout" mat-button mat-aria-label="Modifier" 
+                [disabled]="!forfaitFormAjout.form.valid" (click)="updateForfait(forfaitFormAjout)">Modifier</button>
+        
+                <ng-template #boutonAjout>
+                <button mat-button mat-aria-label="Ajouter" [disabled]="!forfaitFormAjout.form.valid" (click)="addForfait(forfaitFormAjout)">
+                    Créer
+                </button>
+            </ng-template>
+            <button mat-button mat-aria-label="Annuler" (click)="annuler()">Annuler</button>
+            </div>
+        
+
+        </form>
+    </div>

@@ -1,0 +1,14 @@
+app-prix{
+    display:flex;
+}
+.content-wrap{
+    padding-left:4rem;
+}
+
+.adresse-wrap p{
+    margin: 2px;
+}
+
+.etablissement-desc{
+    margin-top: 10px;
+}

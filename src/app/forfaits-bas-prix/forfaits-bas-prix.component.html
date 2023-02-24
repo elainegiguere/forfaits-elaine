@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>Les forfaits à petits prix</h2>
+    <p>Voici tout nons forfaits en bas de 500$. Une véritable aubaine!</p>
+
+    <ng-container *ngFor="let f of forfaits | petitPrix">
+        <div class="forfait-wrap">
+
+            <app-fiche-forfait [f]="f"></app-fiche-forfait>
+
+        </div>
+    </ng-container>
+</div>
+
+<!-- <div class="row" *ngIf="Subject<4 || Subject==4" >
+        Row 1 (Rendered when Subject is lesser than or equal to 4)
+      </div> -->

@@ -1,26 +1,36 @@
 
 :host {
     display: block;
-    background-color: rgb(185, 235, 236);
+    background-color: rgb(58, 58, 58);
 
 }
+h2{
+    color: #fff;
+    text-align: center;
+    padding-bottom: 2%;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
 .card {
-    
     margin:10px
 }
 
 .flex {
     display:flex;
     flex-wrap:wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding:2%;
 }
+
 .flex-col{
     display:flex;
     flex-direction: row;
 }
-.drawer{
-    background-color: rgb(185, 235, 236);
-    padding-bottom: 2%;
+
+
+mat-card-header{
+ margin:0px;
 }
 
-
+/* pourquoi ce css .mat-card-header-text ne fonctionne pas? */

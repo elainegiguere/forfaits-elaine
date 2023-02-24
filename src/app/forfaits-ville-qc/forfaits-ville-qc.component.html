@@ -1,0 +1,9 @@
+<div class="container">
+    <h2>Les forfaits de la Capitale</h2>
+
+    <ng-container *ngFor="let f of forfaits | ville">
+        <div class="forfait-wrap">
+        <app-fiche-forfait [f]="f"></app-fiche-forfait>
+        </div>
+    </ng-container>   
+    </div>    

@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FORFAITS } from '../mock-forfaits';
+import { ForfaitService } from '../forfait.service';
+import { Forfait } from '../forfait';
+
 
 @Component({
   selector: 'app-forfait-long',
@@ -7,10 +10,17 @@ import { FORFAITS } from '../mock-forfaits';
   styleUrls: ['./forfait-long.component.css']
 })
 export class ForfaitLongComponent implements OnInit {
-forfaits = FORFAITS
-  constructor() { }
+forfaits: Forfait[] = [];
+
+  constructor(private forfaitService:ForfaitService) { }
 
   ngOnInit(): void {
+    this.getForfaits();
+  }
+
+  getForfaits(): void {
+    this.forfaitService.getForfaits()
+    .subscribe (resultat => this.forfaits = resultat);
   }
 
 }

@@ -1,0 +1,14 @@
+.example-additional-selection {
+    opacity: 0.75;
+    font-size: 0.75em;
+  }
+
+  .example-form mat-slide-toggle {
+    margin: 8px 0;
+    display: block;
+  }
+
+  .row{
+    margin-top: 1%;
+    margin-bottom:1%;
+  }

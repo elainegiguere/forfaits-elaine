@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FORFAITS } from '../mock-forfaits';
+import { ForfaitService } from '../forfait.service';
+import { Forfait } from '../forfait';
 
 
 @Component({
@@ -8,11 +10,17 @@ import { FORFAITS } from '../mock-forfaits';
   styleUrls: ['./liste-forfaits.component.css']
 })
 export class ListeForfaitsComponent implements OnInit {
- forfaits = FORFAITS;
+  forfaits: Forfait[] = [];
 
-  constructor() { }
+  constructor(private forfaitService:ForfaitService) { }
 
   ngOnInit(): void {
+    this.getForfaits();
+  }
+
+  getForfaits(): void {
+    this.forfaitService.getForfaits()
+    .subscribe (resultat => this.forfaits = resultat);
   }
 
 }

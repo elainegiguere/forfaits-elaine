@@ -1,1 +1,12 @@
-<p>recherche works!</p>
+<form >
+    <label for="categorie">Catégorie </label>
+    <input name= "categorie" [ngModel]="categorie" (ngModelChange)="change($event)" type="text" >
+  
+    <label for="ville">Ville</label>
+    <input name="ville" [ngModel]="ville" (ngModelChange)="changeVille($event)" type="text" >
+    
+    <p>Seulement voir les forfaits à rabais</p>
+    <mat-slide-toggle name="rabais" [(ngModel)]="isChecked">en rabais</mat-slide-toggle>
+  
+  </form>
+  

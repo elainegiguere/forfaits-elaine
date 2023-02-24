@@ -1,0 +1,75 @@
+<div class="container">
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+<div class="row">
+    <div class="col-4">
+        <label for="first-name">Prénom </label> <br>
+        <input id="first-name" type="text" formControlName="firstName" required>
+    </div> 
+    <div class="col-4"> 
+        <label for="last-name">Nom </label><br>
+        <input id="last-name" type="text" formControlName="lastName" required>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+        <label for="email">Courriel </label><br>
+        <input id="email" type="email" formControlName="email" required>
+    </div>
+    <div class="col-4">    
+        <label for="tel">Téléphone </label><br>
+        <input id="tel" type="tel" formControlName="tel">
+    </div>
+    <div class="col-4">
+        <p>Préférence de communication</p><br>
+        <input id="courriel" type="radio" formControlName="courriel">   
+        <label for="courriel">Courriel</label><br>
+        <input id="tel" type="radio" formControlName="tel">
+        <label for="tel">Téléphone</label><br>
+    </div>
+</div>
+ <div class="row">
+    <div class="col-12">
+        <label for="message">Votre message </label><br>
+        <input id="message" type="text" formControlName="message" required>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-4">
+        <mat-form-field appearance="fill">
+            <mat-label>Réponse attendue au plus tard le :</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-hint>MM/JJ/AAAA</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+
+    <div class="col-4">
+      <mat-form-field appearance="fill">
+        <mat-label>Comment avez-vous attendu parler de nous?</mat-label>
+        <mat-select formControlName="toppings" multiple>
+          <mat-select-trigger>
+            {{toppings.value?.[0] || ''}}
+            <span *ngIf="(toppings.value?.length || 0) > 1" class="example-additional-selection">
+              (+{{(toppings.value?.length || 0) - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+            </span>
+          </mat-select-trigger>
+          <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+      <div class="col-4">  
+            <p>Inscription à l’infolettre </p> <br>
+             <mat-slide-toggle [(ngModel)]="isChecked">Oui je veux m'abboner {{isChecked}}</mat-slide-toggle>
+      </div>
+</div>
+
+</form>
+</div>   
+
+ <!--
+        Utilisez les contrôles Angular Material demandés
+        Extra : Le téléphone est requis si la personne a coché téléphone comme préférence de communication. 
+    -->

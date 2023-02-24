@@ -1,10 +1,10 @@
 :host{
     display: block;
-    background-color:  #e4ffff;
+    background-color:  #555555;
 }
 
 .container{
-    background-color: #e4ffff;
+
     margin:auto;
     margin-bottom: 2%
 }
@@ -29,7 +29,9 @@ justify-content: space-around;
     align-items: center;
 }
 h2{
-    padding-bottom: 2%;
+    padding: 4%;
+    color: #fff;
+    text-align: center;
 }
 .etoiles{
     font-size: 0.8rem;
@@ -44,4 +46,14 @@ h2{
 
 .adresseWrapper p{
     margin-bottom: 0px;
+}
+
+.drawer{
+    background-color: rgb(185, 235, 236);
+    padding-bottom: 2%;
+}
+
+.forfait-wrap{
+    background-color: rgb(201, 201, 201);
+    padding: 2%;
 }
