@@ -40,8 +40,8 @@ export class FormulaireAjoutComponent implements OnInit {
       },
       description: '',
     },
-    dateDeDebut: '2023-01-01',
-    dateDeFin: '2023-01-10',
+    dateDeDebut: '',
+    dateDeFin: '',
     prix:0,
     nouveauPrix: 0,
     statut: ''
